@@ -1,0 +1,40 @@
+.footer {
+	background-color: rgba(250,250,250,1);	
+}
+
+.footer__wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	max-width: 935px;
+	margin: 0 auto;
+	padding: 38px 0;
+	font-weight: 600;
+	font-size: 12px;	
+	line-height: 18px;	
+}
+
+.footer__list {
+	padding-left: 0;
+	list-style: none;
+}
+
+.footer__list-item {
+	display: inline-block;	
+	margin-right: 16px;
+}
+
+.footer__list-item:last-child {
+	margin-right: 0;
+}
+
+.footer__link {
+	color: rgba(0,53,105,1);
+	text-transform: uppercase;
+}
+
+.footer__copyright {
+	color: rgba(153,153,153,1);
+}
