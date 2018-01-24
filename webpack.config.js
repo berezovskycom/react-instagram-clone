@@ -7,7 +7,8 @@ let config = {
 	},
 	output: {
 		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'public')
+		path: path.resolve(__dirname, 'public'),
+		publicPath: '/'
 	},
 	module: {
 		rules: [
@@ -43,8 +44,11 @@ let config = {
 	          }
 	        ]
 	      }
-		]
+		]	
 	},
+	devServer: {
+    historyApiFallback: true,
+  },
 	plugins: [
 		new ExtractTextPlugin('./style.css', {
       allChunks: true

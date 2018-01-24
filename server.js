@@ -1,19 +1,16 @@
-var express = require('express');
+const express = require('express')
+const path = require('path')
+const port = process.env.PORT || 3000
+const app = express()
 
-// Create our app
-var app = express();
-const PORT = process.env.PORT || 3000;
+// serve static assets normally
+app.use(express.static(__dirname + '/public'))
 
-app.use(function (req, res, next){
-  if (req.headers['x-forwarded-proto'] === 'https') {
-  	res.redirect('http://' + req.hostname + req.url);
-  } else {
-    next();
-  }
-});
+// handle every other route with index.html, which will contain
+// a script tag to your application's JavaScript file(s).
+app.get('*', function (request, response){
+  response.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+})
 
-app.use(express.static('public'));
-
-app.listen(PORT, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+app.listen(port)
+console.log("server started on port " + port)
