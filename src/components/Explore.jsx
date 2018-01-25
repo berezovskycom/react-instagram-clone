@@ -6,14 +6,6 @@ import Footer from './Footer.jsx';
 import styles from '../styles/Explore.scss';
 
 class Explore extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			pic: 'https://instagram.fhen1-1.fna.fbcdn.net/vp/f02738766bb3e6be51f743dd4a81078c/5AF527AB/t51.2885-15/s640x640/sh0.08/e35/c0.135.1080.1080/26065793_164732244141894_5110852696731025408_n.jpg',
-			nickname: 'New York City',
-			desc: 'the best city in the world',
-		}
-	}
 
 	render() {
 		return (

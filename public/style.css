@@ -198,11 +198,13 @@ a {
   outline: none;
   cursor: pointer; }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 735px) {
   .suggested {
     width: 100%;
     max-width: 580px;
-    padding-bottom: 30px; } }
+    padding-bottom: 30px; }
+  .suggested__list-item {
+    border-bottom: none; } }
 .footer {
   background-color: #fafafa; }
 

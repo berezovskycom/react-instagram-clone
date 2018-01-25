@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from '../styles/Feed.scss';
 import FeedPic from './FeedPic.jsx';
+import { ProfileAPI } from '../api/api.jsx';
 
 class Feed extends Component {
 	constructor(props) {
@@ -16,44 +17,17 @@ class Feed extends Component {
 			<div className="feed__section">
 				<div className="feed__feed">
 					<div className="feed__feed-child">
-						<FeedPic 
-							pic={this.state.pic} 
-							desc={this.state.desc}
-							likesNum="10"
-							commNum="0"
-						/>
-						<FeedPic 
-							pic={this.state.pic} 
-							desc={this.state.desc}
-							likesNum="16"
-							commNum="1"
-						/>
-						<FeedPic 
-							pic={this.state.pic} 
-							desc={this.state.desc}
-							likesNum="21"
-							commNum="0"
-						/>
-					</div>
-					<div className="feed__feed-child">
-						<FeedPic 
-							pic={this.state.pic} 
-							desc={this.state.desc}
-							likesNum="84"
-							commNum="7"
-						/>
-						<FeedPic 
-							pic={this.state.pic} 
-							desc={this.state.desc}
-							likesNum="78"
-							commNum="5"
-						/>
-						<FeedPic 
-							pic={this.state.pic} 
-							desc={this.state.desc}
-							likesNum="20"
-							commNum="0"
-						/>	
+					{
+						ProfileAPI.all().map( i => (
+							<FeedPic 
+								id={i.id}
+								pic={i.src}
+								desc={i.desc}
+								likesNum={i.likes}
+								commNum={i.comments}
+							/>
+						))
+					}
 					</div>
 				</div>
 			</div>
