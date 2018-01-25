@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../styles/Header.scss';
 
 class Header extends Component {
@@ -7,9 +8,9 @@ class Header extends Component {
 			<header className="header">			
 				<nav className="header__nav">
 					<div className="header__logo">
-						<a href="/" className="header__logo-pic--wrapper">
+						<Link to="/" className="header__logo-pic--wrapper">
 						<span className="sprites header__logo-pic">Instagram</span>
-						</a>
+						</Link>
 					</div>
 					<form className="header__form">
 						<input type="text" className="header__input" placeholder="Search"/>
@@ -17,13 +18,13 @@ class Header extends Component {
 					</form>
 					<ul className="header__list">
 						<li className="header__list-item">
-							<a href="/explore" className="sprites sprites__find-ppl header__link">Find People</a>
+							<Link to="/explore" className="sprites sprites__find-ppl header__link">Find People</Link>
 						</li>
 						<li className="header__list-item">
-							<a href="/activity" className="sprites sprites__activity header__link">Activity feed</a>
+							<Link to="/activity" className="sprites sprites__activity header__link">Activity feed</Link>
 						</li>
 						<li className="header__list-item">
-							<a href="/profile" className="sprites sprites__profile header__link">Profile</a>
+							<Link to="/profile" className="sprites sprites__profile header__link">Profile</Link>
 						</li>
 					</ul>
 				</nav>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class FeedItem extends Component {
+class SuggestedItem extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -17,7 +17,7 @@ class FeedItem extends Component {
 
 	render() {
 		return (
-			<li className="feed__list-item">
+			<li className="suggested__list-item">
 				<div className="item__avatar--wrapper">
 					<a href={this.props.link} className="item__avatar--link">
 						<img src={this.props.img} alt={this.props.nickname} className="item__avatar"/>
@@ -35,4 +35,4 @@ class FeedItem extends Component {
 	}
 }
 
-export default FeedItem;
+export default SuggestedItem;

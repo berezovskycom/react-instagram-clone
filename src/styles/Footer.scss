@@ -38,3 +38,13 @@
 .footer__copyright {
 	color: rgba(153,153,153,1);
 }
+
+@media (max-width: 735px) {
+	.footer__wrapper {
+		flex-direction: column;
+		padding: 0;
+	}
+	.footer__nav {
+		text-align: center;
+	}
+}

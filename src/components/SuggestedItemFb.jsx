@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import FeedItem, { follow } from './FeedItem.jsx';
+import SuggestedItem, { follow } from './SuggestedItem.jsx';
 
-class FeedItemFb extends Component {
+class SuggestedItemFb extends Component {
 	render() {
 		return (
-			<li className="feed__list-item">
+			<li className="suggested__list-item">
 				<div className="item__avatar--wrapper item__avatar--wrapper--border">
 						<span className="sprites item__avatar--sprites"/>
 				</div>
@@ -20,4 +20,4 @@ class FeedItemFb extends Component {
 	}
 }
 
-export default FeedItemFb;
+export default SuggestedItemFb;

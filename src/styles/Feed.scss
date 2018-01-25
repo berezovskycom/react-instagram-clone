@@ -1,0 +1,18 @@
+.feed__feed-child {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	flex-shrink: 0;
+	width: 100%;
+	margin-bottom: 28px;
+}
+
+@media (max-width: 735px) {
+	.feed__feed {
+		padding-bottom: 30px;
+	}
+
+	.feed__feed-child {
+		margin-bottom: 3px;
+	}
+}
