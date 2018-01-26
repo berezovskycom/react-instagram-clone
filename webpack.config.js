@@ -1,5 +1,7 @@
+const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 let config = {
 	entry: {
@@ -52,7 +54,11 @@ let config = {
 	plugins: [
 		new ExtractTextPlugin('./style.css', {
       allChunks: true
-    })
+    }),
+    new UglifyJSPlugin(),
+    new webpack.DefinePlugin({
+    	'process.env.NODE_ENV': JSON.stringify('production')
+  	})
 	]
 }
 
